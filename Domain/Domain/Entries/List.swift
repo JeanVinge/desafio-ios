@@ -12,7 +12,7 @@ public struct List: Codable {
 
     // MARK: Var
 
-    let deals: [Deal]
+    public let deals: [Deal]
 }
 
 public typealias ProductList = Response<List>

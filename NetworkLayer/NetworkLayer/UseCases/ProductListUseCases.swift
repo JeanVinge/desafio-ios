@@ -15,7 +15,15 @@ public struct ProductListUseCases: Domain.ProductListUseCases {
 
     public init() {}
 
-    public func list() -> Future<ProductList> {
+    public func inCity() -> Future<ProductList> {
         return Service().request(ListTargetType.inCityList).transformed { try $0.map(ProductList.self) }
+    }
+
+    public func travels() -> Future<ProductList> {
+        Service().request(ListTargetType.travels).transformed { try $0.map(ProductList.self) }
+    }
+
+    public func products() -> Future<ProductList> {
+        Service().request(ListTargetType.products).transformed { try $0.map(ProductList.self) }
     }
 }

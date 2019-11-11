@@ -9,6 +9,8 @@
 import Future
 
 public protocol ProductListUseCases {
-    func list() -> Future<ProductList>
+    func inCity() -> Future<ProductList>
+    func travels() -> Future<ProductList>
+    func products() -> Future<ProductList>
 }
 

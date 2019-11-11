@@ -12,6 +12,6 @@ public struct Response<T: Codable>: Codable {
 
     // MARK: Var
 
-    let code: Int
-    let response: T
+    public let code: Int
+    public let response: T
 }

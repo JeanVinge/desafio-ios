@@ -20,9 +20,9 @@ public struct Deal: Codable {
         case salePrice = "sale_price"
     }
 
-    let title: String
-    let description: String
-    let imageURL: URL
-    let fullPrice: Double
-    let salePrice: Double
+    public let title: String
+    public let description: String
+    public let imageURL: URL
+    public let fullPrice: Double
+    public let salePrice: Double
 }

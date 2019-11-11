@@ -30,6 +30,8 @@
 		384B537E237728A700AA9538 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537C237728A700AA9538 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		384B5380237728AC00AA9538 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537F237728AC00AA9538 /* Utility.framework */; };
 		384B5381237728AC00AA9538 /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537F237728AC00AA9538 /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		384B53842377BA5900AA9538 /* InCityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53832377BA5900AA9538 /* InCityPresenter.swift */; };
+		384B538A2378948D00AA9538 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53892378948D00AA9538 /* GenericDataSource.swift */; };
 		7A3658CD07F37E734BE1080D /* Pods_desafio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5B8AFFB3F66B971B58080 /* Pods_desafio_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		384B5379237728A100AA9538 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384B537C237728A700AA9538 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384B537F237728AC00AA9538 /* Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B53832377BA5900AA9538 /* InCityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCityPresenter.swift; sourceTree = "<group>"; };
+		384B53892378948D00AA9538 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		64A59C436C163A625858051F /* Pods-desafio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios/Pods-desafio-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		83B25E3E0A5C58B04407B09A /* Pods-desafio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios/Pods-desafio-ios.release.xcconfig"; sourceTree = "<group>"; };
 		94C0F9E744B0A4CAF5019CF5 /* Pods-desafio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-iosTests/Pods-desafio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,11 +122,11 @@
 		384B51332374D14D00AA9538 = {
 			isa = PBXGroup;
 			children = (
+				3BDCB85A7F1BF172577105C1 /* Frameworks */,
+				FABC2CD869F751CD3B9512BA /* Pods */,
+				384B513D2374D14D00AA9538 /* Products */,
 				384B513E2374D14D00AA9538 /* desafio-ios */,
 				384B51552374D14F00AA9538 /* desafio-iosTests */,
-				384B513D2374D14D00AA9538 /* Products */,
-				FABC2CD869F751CD3B9512BA /* Pods */,
-				3BDCB85A7F1BF172577105C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,10 +142,10 @@
 		384B513E2374D14D00AA9538 /* desafio-ios */ = {
 			isa = PBXGroup;
 			children = (
-				384B532C2375FE2500AA9538 /* Components */,
-				384B52E32374E6CE00AA9538 /* Screens */,
-				384B51622374D18D00AA9538 /* Resources */,
 				384B51612374D17F00AA9538 /* AppDelegate */,
+				384B532C2375FE2500AA9538 /* Components */,
+				384B51622374D18D00AA9538 /* Resources */,
+				384B52E32374E6CE00AA9538 /* Screens */,
 			);
 			path = "desafio-ios";
 			sourceTree = "<group>";
@@ -149,8 +153,8 @@
 		384B51552374D14F00AA9538 /* desafio-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				384B51562374D14F00AA9538 /* desafio_iosTests.swift */,
 				384B51582374D14F00AA9538 /* Info.plist */,
+				384B51562374D14F00AA9538 /* desafio_iosTests.swift */,
 			);
 			path = "desafio-iosTests";
 			sourceTree = "<group>";
@@ -166,9 +170,9 @@
 		384B51622374D18D00AA9538 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				384B514D2374D14F00AA9538 /* Info.plist */,
-				384B51452374D14F00AA9538 /* Assets.xcassets */,
 				384B51632374D19300AA9538 /* Storyboard */,
+				384B51452374D14F00AA9538 /* Assets.xcassets */,
+				384B514D2374D14F00AA9538 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -184,11 +188,11 @@
 		384B52E32374E6CE00AA9538 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				384B52E42374E6D900AA9538 /* Home */,
+				384B52E52374E6F600AA9538 /* InCity */,
 				384B531F2375F7C700AA9538 /* Main */,
 				384B52E72374E70C00AA9538 /* Products */,
 				384B52E62374E70300AA9538 /* Travels */,
-				384B52E52374E6F600AA9538 /* InCity */,
-				384B52E42374E6D900AA9538 /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -205,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				384B52E92374E71900AA9538 /* Builder */,
+				384B53822377BA3E00AA9538 /* Presenter */,
 				384B52E82374E71400AA9538 /* View */,
 			);
 			path = InCity;
@@ -231,6 +236,7 @@
 		384B52E82374E71400AA9538 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				384B53892378948D00AA9538 /* GenericDataSource.swift */,
 				384B53112375F17F00AA9538 /* InCityView.swift */,
 			);
 			path = View;
@@ -323,6 +329,14 @@
 				384B532E2375FE3D00AA9538 /* ProductView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		384B53822377BA3E00AA9538 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				384B53832377BA5900AA9538 /* InCityPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		3BDCB85A7F1BF172577105C1 /* Frameworks */ = {
@@ -544,8 +558,10 @@
 				384B531E2375F28400AA9538 /* ProductsBuilder.swift in Sources */,
 				384B531A2375F23700AA9538 /* TravelsView.swift in Sources */,
 				384B532F2375FE3D00AA9538 /* ProductView.swift in Sources */,
+				384B53842377BA5900AA9538 /* InCityPresenter.swift in Sources */,
 				384B52EF2374E79800AA9538 /* MainCoordinator.swift in Sources */,
 				384B52F12374E7F600AA9538 /* HomeCoordinator.swift in Sources */,
+				384B538A2378948D00AA9538 /* GenericDataSource.swift in Sources */,
 				384B531C2375F26000AA9538 /* TravelsBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +591,7 @@
 				384B514B2374D14F00AA9538 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

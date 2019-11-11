@@ -28,6 +28,9 @@
 		384B52ED2374E76100AA9538 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B52EC2374E76100AA9538 /* Coordinator.swift */; };
 		384B52F32374EC6C00AA9538 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B52F22374EC6C00AA9538 /* GenericView.swift */; };
 		384B530E2375F03900AA9538 /* ControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B530D2375F03900AA9538 /* ControllerBuilder.swift */; };
+		384B53862377BAF100AA9538 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53852377BAF100AA9538 /* Presenter.swift */; };
+		384B53882378390A00AA9538 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53872378390A00AA9538 /* NavigationController.swift */; };
+		384B538C23796E2900AA9538 /* UIVew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B538B23796E2900AA9538 /* UIVew+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		384B52EC2374E76100AA9538 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		384B52F22374EC6C00AA9538 /* GenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
 		384B530D2375F03900AA9538 /* ControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBuilder.swift; sourceTree = "<group>"; };
+		384B53852377BAF100AA9538 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		384B53872378390A00AA9538 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		384B538B23796E2900AA9538 /* UIVew+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVew+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 				384B52DD2374E3F100AA9538 /* TableViewCell.swift */,
 				384B52BC2374DD9100AA9538 /* ViewController.swift */,
 				384B52F22374EC6C00AA9538 /* GenericView.swift */,
+				384B53872378390A00AA9538 /* NavigationController.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 				384B52C02374DDC400AA9538 /* Reusable.swift */,
 				384B52DF2374E48C00AA9538 /* ContentConvertible.swift */,
 				384B530D2375F03900AA9538 /* ControllerBuilder.swift */,
+				384B53852377BAF100AA9538 /* Presenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			children = (
 				384B52C82374E02600AA9538 /* UITableView+Extensions.swift */,
 				384B52C92374E02600AA9538 /* UITableViewCell+Extensions.swift */,
+				384B538B23796E2900AA9538 /* UIVew+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,10 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				384B52ED2374E76100AA9538 /* Coordinator.swift in Sources */,
+				384B53862377BAF100AA9538 /* Presenter.swift in Sources */,
 				384B52F32374EC6C00AA9538 /* GenericView.swift in Sources */,
 				384B52DE2374E3F200AA9538 /* TableViewCell.swift in Sources */,
 				384B52D52374E2DA00AA9538 /* LayoutAttribute.swift in Sources */,
 				384B52DC2374E3E800AA9538 /* TableView.swift in Sources */,
+				384B538C23796E2900AA9538 /* UIVew+Extensions.swift in Sources */,
 				384B52E02374E48C00AA9538 /* ContentConvertible.swift in Sources */,
 				384B52E22374E4EF00AA9538 /* Typealias.swift in Sources */,
 				384B52C42374DDC400AA9538 /* Reusable.swift in Sources */,
@@ -330,6 +341,7 @@
 				384B52BD2374DD9100AA9538 /* ViewController.swift in Sources */,
 				384B52D42374E2DA00AA9538 /* LayoutProxy.swift in Sources */,
 				384B52DA2374E33C00AA9538 /* TableViewErrors.swift in Sources */,
+				384B53882378390A00AA9538 /* NavigationController.swift in Sources */,
 				384B52D72374E2DA00AA9538 /* LayoutAnchor.swift in Sources */,
 				384B52D62374E2DA00AA9538 /* LayoutForDimension.swift in Sources */,
 			);

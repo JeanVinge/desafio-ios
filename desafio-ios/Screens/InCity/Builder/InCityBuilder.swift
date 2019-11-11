@@ -15,7 +15,13 @@ struct InCityBuilder: ControllerBuilder {
     // MARK: Init
 
     static func build() -> UIViewController {
-        return ViewController<InCityView>(L10n.Tabbar.icTheCity,
-                                          tabbarImage: Asset.icBuilding.image)
+        let presenter = InCityPresenter()
+        let vc = ViewController<InCityView>(L10n.Tabbar.icTheCity,
+                                            tabbarImage: Asset.icBuilding.image,
+                                            observer: presenter)
+        vc.baseView.setup(presenter)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "TEST", style: .plain, target: self, action: nil)]
+        return nav
     }
 }
