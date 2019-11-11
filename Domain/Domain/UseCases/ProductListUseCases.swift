@@ -13,4 +13,3 @@ public protocol ProductListUseCases {
     func travels() -> Future<ProductList>
     func products() -> Future<ProductList>
 }
-

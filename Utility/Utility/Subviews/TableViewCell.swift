@@ -15,7 +15,7 @@ final public class TableViewCell<T: TableViewRepresentation>: ReusableTableViewC
     lazy var wrappedView = T()
 
     // MARK: Init
-    
+
     public override func prepareForReuse() {
         super.prepareForReuse()
         wrappedView.prepareForReuse()

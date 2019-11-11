@@ -24,8 +24,8 @@ public struct Builder<Base: AnyObject> {
         self._build = { base }
     }
 
-    public subscript<Value>(dynamicMember keyPath: ReferenceWritableKeyPath<Base, Value>) -> (Value) -> Builder<Base> {
-        { [build = _build] value in
+    public subscript<Value>(dynamicMember
+        keyPath: ReferenceWritableKeyPath<Base, Value>) -> (Value) -> Builder<Base> { { [build = _build] value in
             Builder {
                 let object = build()
                 object[keyPath: keyPath] = value
@@ -47,6 +47,7 @@ public protocol LayoutCompatible {
 extension LayoutCompatible where Self: AnyObject {
     public var with: Builder<Self> {
         get { Builder(self) }
+        //swiftlint:disable unused_setter_value
         set {}
     }
 

@@ -21,7 +21,7 @@
       location = "group:NetworkLayer/NetworkLayer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:desafio-ios.xcodeproj">
+      location = "group:/Users/jean.vinge/Desktop/Projetos iOS/desafio-ios/App.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

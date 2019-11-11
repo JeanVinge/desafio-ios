@@ -18,13 +18,14 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Asset {
-  public static let icBag = ImageAsset(name: "ic_bag")
-  public static let icBuilding = ImageAsset(name: "ic_building")
+  public static let icDown = ImageAsset(name: "ic_down")
+  public static let icStar = ImageAsset(name: "ic_star")
   public static let icCart = ImageAsset(name: "ic_cart")
   public static let icFilter = ImageAsset(name: "ic_filter")
   public static let icHeart = ImageAsset(name: "ic_heart")
+  public static let icBag = ImageAsset(name: "ic_bag")
+  public static let icBuilding = ImageAsset(name: "ic_building")
   public static let icPlane = ImageAsset(name: "ic_plane")
-  public static let icStar = ImageAsset(name: "ic_star")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

@@ -8,8 +8,19 @@
 
 import UIKit
 
-extension UITableView {
-    public func dequeue<T: ReusableTableViewCell>(
+public extension UITableView {
+
+    convenience init(_ backgroundColor: UIColor = .clear) {
+        self.init(frame: .zero, style: .plain)
+        self.backgroundColor = backgroundColor
+        self.separatorStyle = .none
+        self.separatorInset = .zero
+        self.separatorColor = .clear
+        self.estimatedRowHeight = 1
+        self.contentInset = .zero
+    }
+
+    func dequeue<T: ReusableTableViewCell>(
         reusable: T.Type = T.self,
         at indexPath: IndexPath,
         with object: Any? = nil) -> T {

@@ -1,10 +1,11 @@
 platform :ios, '12.0'
 
-target 'desafio-ios' do
+target 'App' do
   use_frameworks!
   pod 'Kingfisher'
   pod 'SwiftGen'
-  target 'desafio-iosTests' do
+  pod 'SwiftLint'
+  target 'AppTests' do
     inherit! :search_paths
   end
 end

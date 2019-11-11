@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Deal: Codable {
-    
+
     // MARK: Var
 
     enum CodingKeys: String, CodingKey {
