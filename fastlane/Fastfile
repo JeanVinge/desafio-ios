@@ -18,5 +18,5 @@ default_platform(:ios)
 desc "Run unit tests"
 lane :test do |options|
   clear_derived_data
-  scan(scheme: "desafio-ios", devices: ["iPhone 8"])
+  scan(scheme: "App", devices: ["iPhone 8"])
 end
