@@ -50,6 +50,10 @@ final class ProductView: GenericView {
             $0.right.equalToSuperView()
             $0.height.constraint(equalToConstant: 240)
         }
+        titleLabel.layout {
+            $0.bottom.equal(to: imageView.bottomAnchor, offsetBy: 20)
+            $0.left.equalToSuperView(20)
+        }
         descriptionLabel.layout {
             $0.top.equal(to: imageView.bottomAnchor,
                          offsetBy: 10)
@@ -70,6 +74,7 @@ extension ProductView: TableCellConvertible {
     // MARK: Init
 
     func setup(with data: Deal) {
+        titleLabel.text = data.title
         descriptionLabel.text = data.description
         imageView.kf.setImage(with: data.imageURL)
     }

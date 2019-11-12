@@ -20,7 +20,7 @@ final class InCityView: GenericView, Bindable {
 
     var presenter: InCityPresenter?
 
-    lazy var tableView = UITableView(.white)
+    lazy var tableView = TableView(.white)
 
     lazy var dataSource: GenericDataSource<Deal> = {
         return GenericDataSource<Deal>(tableView)
@@ -30,7 +30,16 @@ final class InCityView: GenericView, Bindable {
 
     override func initSubviews() {
         addSubview(tableView)
+        tableView.configureRefresh()
         dataSource.start()
+        observe()
+        tableView.onRefresh = { [weak self] in
+            guard let self = self else { return }
+            self.observe()
+        }
+    }
+
+    @objc func reload() {
         observe()
     }
 
@@ -42,6 +51,9 @@ final class InCityView: GenericView, Bindable {
                 let deals = try? result.get()
                 else { return }
             self.dataSource.reload(deals)
+            DispatchQueue.main.async {
+                self.tableView.refreshControl?.endRefreshing()
+            }
         }
     }
 

@@ -23,6 +23,10 @@
 		384B533B2376038300AA9538 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B533A2376038300AA9538 /* Service.swift */; };
 		384B53412376597F00AA9538 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B533E2376597F00AA9538 /* URLSession+Extensions.swift */; };
 		384B53752377192900AA9538 /* ProductListUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53742377192900AA9538 /* ProductListUseCases.swift */; };
+		3889FB0C237A29BB00F18D64 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB0B237A29BB00F18D64 /* Domain.framework */; };
+		3889FB0D237A29BB00F18D64 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB0B237A29BB00F18D64 /* Domain.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3889FB10237A29C100F18D64 /* Future.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB0F237A29C100F18D64 /* Future.framework */; };
+		3889FB11237A29C100F18D64 /* Future.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB0F237A29C100F18D64 /* Future.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,21 @@
 			remoteInfo = NetworkLayer;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3889FB0E237A29BB00F18D64 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3889FB0D237A29BB00F18D64 /* Domain.framework in Embed Frameworks */,
+				3889FB11237A29C100F18D64 /* Future.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		384B52262374D79100AA9538 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +74,9 @@
 		384B533A2376038300AA9538 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		384B533E2376597F00AA9538 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		384B53742377192900AA9538 /* ProductListUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListUseCases.swift; sourceTree = "<group>"; };
+		3889FB05237A28EF00F18D64 /* Future.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Future.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3889FB0B237A29BB00F18D64 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3889FB0F237A29C100F18D64 /* Future.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Future.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3889FB0C237A29BB00F18D64 /* Domain.framework in Frameworks */,
+				3889FB10237A29C100F18D64 /* Future.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +103,7 @@
 		384B521C2374D79100AA9538 = {
 			isa = PBXGroup;
 			children = (
+				3889FB04237A28EF00F18D64 /* Frameworks */,
 				384B52282374D79100AA9538 /* NetworkLayer */,
 				384B52332374D79100AA9538 /* NetworkLayerTests */,
 				384B52272374D79100AA9538 /* Products */,
@@ -165,6 +190,16 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		3889FB04237A28EF00F18D64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3889FB0F237A29C100F18D64 /* Future.framework */,
+				3889FB0B237A29BB00F18D64 /* Domain.framework */,
+				3889FB05237A28EF00F18D64 /* Future.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -187,6 +222,7 @@
 				384B52222374D79100AA9538 /* Sources */,
 				384B52232374D79100AA9538 /* Frameworks */,
 				384B52242374D79100AA9538 /* Resources */,
+				3889FB0E237A29BB00F18D64 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

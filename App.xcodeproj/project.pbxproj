@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25CC53FA440586F2F2BB7460 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3347D91C6A85E1C413ED3C6 /* Pods_App.framework */; };
 		384B51402374D14D00AA9538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B513F2374D14D00AA9538 /* AppDelegate.swift */; };
 		384B51462374D14F00AA9538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B51452374D14F00AA9538 /* Assets.xcassets */; };
 		384B514C2374D14F00AA9538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 384B514A2374D14F00AA9538 /* LaunchScreen.storyboard */; };
@@ -23,20 +22,22 @@
 		384B53232375F7F200AA9538 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53222375F7F200AA9538 /* MainBuilder.swift */; };
 		384B532F2375FE3D00AA9538 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B532E2375FE3D00AA9538 /* ProductView.swift */; };
 		384B53772377289C00AA9538 /* Future.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384B53762377289C00AA9538 /* Future.framework */; };
-		384B53782377289C00AA9538 /* Future.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B53762377289C00AA9538 /* Future.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		384B53782377289C00AA9538 /* Future.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B53762377289C00AA9538 /* Future.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		384B537A237728A100AA9538 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384B5379237728A100AA9538 /* Domain.framework */; };
-		384B537B237728A100AA9538 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B5379237728A100AA9538 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		384B537B237728A100AA9538 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B5379237728A100AA9538 /* Domain.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		384B537D237728A700AA9538 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537C237728A700AA9538 /* NetworkLayer.framework */; };
-		384B537E237728A700AA9538 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537C237728A700AA9538 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		384B537E237728A700AA9538 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537C237728A700AA9538 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		384B5380237728AC00AA9538 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537F237728AC00AA9538 /* Utility.framework */; };
-		384B5381237728AC00AA9538 /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537F237728AC00AA9538 /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		384B5381237728AC00AA9538 /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B537F237728AC00AA9538 /* Utility.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		384B53842377BA5900AA9538 /* InCityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53832377BA5900AA9538 /* InCityPresenter.swift */; };
 		384B538A2378948D00AA9538 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53892378948D00AA9538 /* GenericDataSource.swift */; };
 		384B53912379AEFA00AA9538 /* CityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53902379AEFA00AA9538 /* CityButton.swift */; };
 		384B53972379C37400AA9538 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384B53962379C37400AA9538 /* Resources.framework */; };
-		384B53982379C37400AA9538 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B53962379C37400AA9538 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		384B53982379C37400AA9538 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 384B53962379C37400AA9538 /* Resources.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		384B539C237A1B6D00AA9538 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B539B237A1B6D00AA9538 /* NavigationViewController.swift */; };
 		384B53A7237A266700AA9538 /* NavigationBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53A6237A266700AA9538 /* NavigationBarButtons.swift */; };
+		3889FB09237A29A200F18D64 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3347D91C6A85E1C413ED3C6 /* Pods_App.framework */; };
+		3889FB0A237A29A200F18D64 /* Pods_App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3347D91C6A85E1C413ED3C6 /* Pods_App.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8BD55A33408C7ED609CAAC85 /* Pods_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90E3660F1C78AB74F524486 /* Pods_AppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3889FB0A237A29A200F18D64 /* Pods_App.framework in Embed Frameworks */,
 				384B537E237728A700AA9538 /* NetworkLayer.framework in Embed Frameworks */,
 				384B53982379C37400AA9538 /* Resources.framework in Embed Frameworks */,
 				384B5381237728AC00AA9538 /* Utility.framework in Embed Frameworks */,
@@ -114,12 +116,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3889FB09237A29A200F18D64 /* Pods_App.framework in Frameworks */,
 				384B537A237728A100AA9538 /* Domain.framework in Frameworks */,
 				384B537D237728A700AA9538 /* NetworkLayer.framework in Frameworks */,
 				384B53972379C37400AA9538 /* Resources.framework in Frameworks */,
 				384B5380237728AC00AA9538 /* Utility.framework in Frameworks */,
 				384B53772377289C00AA9538 /* Future.framework in Frameworks */,
-				25CC53FA440586F2F2BB7460 /* Pods_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

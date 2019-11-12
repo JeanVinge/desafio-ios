@@ -33,6 +33,7 @@
 		384B539E237A1E3500AA9538 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B539D237A1E3500AA9538 /* UIBarButtonItem+Extensions.swift */; };
 		384B53A0237A1F7800AA9538 /* UITabbarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */; };
 		384B53A2237A20A400AA9538 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */; };
+		3889FB13237A2ABE00F18D64 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3889FB12237A2ABE00F18D64 /* TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		384B539D237A1E3500AA9538 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarController+Extensions.swift"; sourceTree = "<group>"; };
 		384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		3889FB12237A2ABE00F18D64 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				384B52DD2374E3F100AA9538 /* TableViewCell.swift */,
 				384B52BC2374DD9100AA9538 /* ViewController.swift */,
 				384B52F22374EC6C00AA9538 /* GenericView.swift */,
+				3889FB12237A2ABE00F18D64 /* TableView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				384B53A0237A1F7800AA9538 /* UITabbarController+Extensions.swift in Sources */,
 				384B52C42374DDC400AA9538 /* Reusable.swift in Sources */,
 				384B530E2375F03900AA9538 /* ControllerBuilder.swift in Sources */,
+				3889FB13237A2ABE00F18D64 /* TableView.swift in Sources */,
 				384B52C52374DDC400AA9538 /* ConfigurableView.swift in Sources */,
 				384B52CA2374E02600AA9538 /* UITableView+Extensions.swift in Sources */,
 				384B52CB2374E02600AA9538 /* UITableViewCell+Extensions.swift in Sources */,
