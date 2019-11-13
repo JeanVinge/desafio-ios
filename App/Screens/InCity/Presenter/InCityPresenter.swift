@@ -16,10 +16,9 @@ struct InCityPresenter: Presenter {
 
     // MARK: Var
 
-    let listUseCases = ProductListUseCases()
-
     struct Input {
         let observer: Promise<[Deal]>
+        let fetcher: Domain.ListFetcher = ListFetcher()
     }
 
     typealias Output = Void
@@ -27,10 +26,10 @@ struct InCityPresenter: Presenter {
     // MARK: Init
 
     func transform(_ input: Input) {
-        listUseCases.inCity().observe { result in
+        input.fetcher.inCity().observe { result in
             switch result {
-            case let .success(products):
-                input.observer.resolve(with: products.response.deals)
+            case let .success(productList):
+                input.observer.resolve(with: productList.response.deals)
             case let .failure(error):
                 input.observer.reject(with: error)
             }

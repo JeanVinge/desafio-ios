@@ -33,5 +33,4 @@ extension ListTargetType: TargetType {
     public var task: Task {
         return .requestParameters(parameters: [:], encoding: URLEncoding())
     }
-
 }

@@ -32,18 +32,17 @@ final class InCityView: GenericView, Bindable {
         addSubview(tableView)
         tableView.configureRefresh()
         dataSource.start()
-        observe()
         tableView.onRefresh = { [weak self] in
             guard let self = self else { return }
-            self.observe()
+            self.reload()
         }
     }
 
     @objc func reload() {
-        observe()
+        moduleDidLoad()
     }
 
-    func observe() {
+    func moduleDidLoad() {
         let promise = Promise<[Deal]>()
         presenter?.transform(InCityPresenter.Input(observer: promise))
         promise.observe { [weak self] result in

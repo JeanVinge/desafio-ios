@@ -63,14 +63,18 @@ final class ProductView: GenericView {
         lazy var titleLabel = UILabel()
             .with
             .textColor(.white)
+            .font(.systemFont(ofSize: 16, weight: .medium))
             .build()
+
+        lazy var likeButton = LikeButton()
 
         // MARK: Init
 
         override func initSubviews() {
             addSubviews(imageView,
                         overlayView,
-                        titleLabel)
+                        titleLabel,
+                        likeButton)
         }
 
         override func initConstraints() {
@@ -88,8 +92,12 @@ final class ProductView: GenericView {
                 $0.bottom.equal(to: imageView.bottomAnchor)
             }
             titleLabel.layout {
-                $0.bottom.equal(to: imageView.bottomAnchor, offsetBy: -20)
+                $0.bottom.equal(to: imageView.bottomAnchor, offsetBy: -15)
                 $0.left.equalToSuperView(20)
+            }
+            likeButton.layout {
+                $0.bottom.equal(to: titleLabel.bottomAnchor)
+                $0.right.equalToSuperView(-20)
             }
         }
     }
@@ -144,6 +152,7 @@ extension ProductView: TableCellConvertible {
         topImageView.titleLabel.text = data.title
         descriptionLabel.text = data.description
         topImageView.imageView.kf.setImage(with: data.imageURL)
+        priceView.fullPriceLabel.text = "\(data.salePrice.toCurrency ?? "")"
     }
 }
 

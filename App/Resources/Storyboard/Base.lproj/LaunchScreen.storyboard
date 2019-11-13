@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desafio Peixe Urbano" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh5-km-cSH">
-                                <rect key="frame" x="20" y="403" width="374" height="100.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
+                                <rect key="frame" x="20" y="407.5" width="374" height="91"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

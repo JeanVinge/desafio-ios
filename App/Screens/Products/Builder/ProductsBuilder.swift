@@ -15,7 +15,12 @@ struct ProductsBuilder: ControllerBuilder {
     // MARK: Init
 
     static func build() -> UIViewController {
-        return ViewController<ProductsView>(L10n.Tabbar.products,
-                                            tabbarImage: Asset.icBag.image)
+        let presenter = ProductsPresenter()
+        let vc = ViewController<ProductsView>(L10n.Tabbar.products,
+                                              tabbarImage: Asset.icBag.image)
+        vc.baseView.setup(presenter)
+        let nav = NavigationController(rootViewController: vc)
+        NavigationBarButtons.insert(in: vc)
+        return nav
     }
 }

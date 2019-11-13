@@ -24,6 +24,9 @@
       location = "group:Future/Future.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Persistence/Persistence.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

@@ -13,6 +13,16 @@ public struct List: Codable {
     // MARK: Var
 
     public let deals: [Deal]
+
+    public init(_ deals: [Deal] = []) {
+        self.deals = deals
+    }
 }
 
 public typealias ProductList = Response<List>
+
+public extension ProductList {
+    static var empty: ProductList {
+        return ProductList(response: List())
+    }
+}

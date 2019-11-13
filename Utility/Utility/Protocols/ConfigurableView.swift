@@ -14,14 +14,7 @@ public protocol ConfigurableView {
     func initConstraints()
 }
 
-public extension ConfigurableView where Self: UIViewController {
-    func initLayout() {
-        initSubviews()
-        initConstraints()
-    }
-}
-
-public extension ConfigurableView where Self: UIView {
+public extension ConfigurableView where Self: NSObject {
     func initLayout() {
         initSubviews()
         initConstraints()

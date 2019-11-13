@@ -7,16 +7,26 @@
  */
 
 import Foundation
+import Persistence
 
 public typealias FutureResult<Value> = Result<Value, Error>
+public typealias FutureErrorCompletion = (Error) -> Void
 
 public class Future<Value> {
+
+    // MARK: Var
+
+    public typealias FutureResponse = (FutureResult<Value>) -> Void
+
     fileprivate var result: FutureResult<Value>? {
         didSet { result.map(report) }
     }
-    private lazy var callbacks = [(FutureResult<Value>) -> Void]()
+    private lazy var callbacks = [FutureResponse]()
+    private lazy var callbackErrors = [FutureErrorCompletion]()
 
-    public func observe(with callback: @escaping (FutureResult<Value>) -> Void) {
+    // MARK: Init
+
+    public func observe(with callback: @escaping FutureResponse) {
         callbacks.append(callback)
         result.map(callback)
     }

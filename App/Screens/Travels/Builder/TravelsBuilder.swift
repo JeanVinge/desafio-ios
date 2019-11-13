@@ -15,7 +15,12 @@ struct TravelsBuilder: ControllerBuilder {
     // MARK: Init
 
     static func build() -> UIViewController {
-        return ViewController<TravelsView>(L10n.Tabbar.travels,
+        let presenter = TravelsPresenter()
+        let vc = ViewController<TravelsView>(L10n.Tabbar.travels,
                                            tabbarImage: Asset.icPlane.image)
+        vc.baseView.setup(presenter)
+        let nav = NavigationController(rootViewController: vc)
+        NavigationBarButtons.insert(in: vc)
+        return nav
     }
 }

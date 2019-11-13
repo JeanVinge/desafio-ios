@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38495B39237AF51300529F2A /* BadgeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38495B38237AF51300529F2A /* BadgeBarButtonItem.swift */; };
 		384B52542374D81500AA9538 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384B524A2374D81500AA9538 /* Utility.framework */; };
 		384B52592374D81500AA9538 /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B52582374D81500AA9538 /* UtilityTests.swift */; };
 		384B525B2374D81500AA9538 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 384B524D2374D81500AA9538 /* Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +35,9 @@
 		384B53A0237A1F7800AA9538 /* UITabbarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */; };
 		384B53A2237A20A400AA9538 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */; };
 		3889FB13237A2ABE00F18D64 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3889FB12237A2ABE00F18D64 /* TableView.swift */; };
+		3889FB1A237A327600F18D64 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3889FB19237A327600F18D64 /* Button.swift */; };
+		388A4B5D237B6CB000E9F3F0 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A4B5C237B6CB000E9F3F0 /* Double+Extensions.swift */; };
+		388A4B5F237B6D3200E9F3F0 /* NumberFormmater+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A4B5E237B6D3200E9F3F0 /* NumberFormmater+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38495B38237AF51300529F2A /* BadgeBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBarButtonItem.swift; sourceTree = "<group>"; };
 		384B524A2374D81500AA9538 /* Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		384B524D2374D81500AA9538 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		384B524E2374D81500AA9538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +82,9 @@
 		384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarController+Extensions.swift"; sourceTree = "<group>"; };
 		384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		3889FB12237A2ABE00F18D64 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		3889FB19237A327600F18D64 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		388A4B5C237B6CB000E9F3F0 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		388A4B5E237B6D3200E9F3F0 /* NumberFormmater+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormmater+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +151,7 @@
 		384B52BB2374D99C00AA9538 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				384B52DD2374E3F100AA9538 /* TableViewCell.swift */,
-				384B52BC2374DD9100AA9538 /* ViewController.swift */,
-				384B52F22374EC6C00AA9538 /* GenericView.swift */,
-				3889FB12237A2ABE00F18D64 /* TableView.swift */,
+				388A4B5A237B6C8900E9F3F0 /* UIKit */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -166,13 +171,8 @@
 		384B52C72374E01900AA9538 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				384B52C82374E02600AA9538 /* UITableView+Extensions.swift */,
-				384B52C92374E02600AA9538 /* UITableViewCell+Extensions.swift */,
-				384B538B23796E2900AA9538 /* UIVew+Extensions.swift */,
-				384B5399237A185700AA9538 /* UIPanGestureRecognizer+Extensions.swift */,
-				384B539D237A1E3500AA9538 /* UIBarButtonItem+Extensions.swift */,
-				384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */,
-				384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */,
+				388A4B5B237B6CA400E9F3F0 /* Foundation */,
+				388A4B59237B6C7200E9F3F0 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +220,42 @@
 				384B52EC2374E76100AA9538 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		388A4B59237B6C7200E9F3F0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				384B52C82374E02600AA9538 /* UITableView+Extensions.swift */,
+				384B52C92374E02600AA9538 /* UITableViewCell+Extensions.swift */,
+				384B538B23796E2900AA9538 /* UIVew+Extensions.swift */,
+				384B5399237A185700AA9538 /* UIPanGestureRecognizer+Extensions.swift */,
+				384B539D237A1E3500AA9538 /* UIBarButtonItem+Extensions.swift */,
+				384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */,
+				384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		388A4B5A237B6C8900E9F3F0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				384B52DD2374E3F100AA9538 /* TableViewCell.swift */,
+				384B52BC2374DD9100AA9538 /* ViewController.swift */,
+				384B52F22374EC6C00AA9538 /* GenericView.swift */,
+				3889FB12237A2ABE00F18D64 /* TableView.swift */,
+				3889FB19237A327600F18D64 /* Button.swift */,
+				38495B38237AF51300529F2A /* BadgeBarButtonItem.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		388A4B5B237B6CA400E9F3F0 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				388A4B5C237B6CB000E9F3F0 /* Double+Extensions.swift */,
+				388A4B5E237B6D3200E9F3F0 /* NumberFormmater+Extensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,10 +371,12 @@
 				384B53A2237A20A400AA9538 /* UIViewController+Extensions.swift in Sources */,
 				384B539A237A185700AA9538 /* UIPanGestureRecognizer+Extensions.swift in Sources */,
 				384B52ED2374E76100AA9538 /* Coordinator.swift in Sources */,
+				388A4B5D237B6CB000E9F3F0 /* Double+Extensions.swift in Sources */,
 				384B53862377BAF100AA9538 /* Presenter.swift in Sources */,
 				384B52F32374EC6C00AA9538 /* GenericView.swift in Sources */,
 				384B52DE2374E3F200AA9538 /* TableViewCell.swift in Sources */,
 				384B52D52374E2DA00AA9538 /* LayoutAttribute.swift in Sources */,
+				388A4B5F237B6D3200E9F3F0 /* NumberFormmater+Extensions.swift in Sources */,
 				384B538C23796E2900AA9538 /* UIVew+Extensions.swift in Sources */,
 				384B52E02374E48C00AA9538 /* ContentConvertible.swift in Sources */,
 				384B52E22374E4EF00AA9538 /* Typealias.swift in Sources */,
@@ -347,9 +385,11 @@
 				384B530E2375F03900AA9538 /* ControllerBuilder.swift in Sources */,
 				3889FB13237A2ABE00F18D64 /* TableView.swift in Sources */,
 				384B52C52374DDC400AA9538 /* ConfigurableView.swift in Sources */,
+				3889FB1A237A327600F18D64 /* Button.swift in Sources */,
 				384B52CA2374E02600AA9538 /* UITableView+Extensions.swift in Sources */,
 				384B52CB2374E02600AA9538 /* UITableViewCell+Extensions.swift in Sources */,
 				384B52CD2374E25200AA9538 /* StyleBuilder.swift in Sources */,
+				38495B39237AF51300529F2A /* BadgeBarButtonItem.swift in Sources */,
 				384B539E237A1E3500AA9538 /* UIBarButtonItem+Extensions.swift in Sources */,
 				384B52BD2374DD9100AA9538 /* ViewController.swift in Sources */,
 				384B52D42374E2DA00AA9538 /* LayoutProxy.swift in Sources */,

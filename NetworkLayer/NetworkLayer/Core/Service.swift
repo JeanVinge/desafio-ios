@@ -8,7 +8,7 @@
 
 import Future
 
-final class Service {
+public final class Service {
 
     // MARK: Var
 

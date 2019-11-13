@@ -20,11 +20,13 @@ public protocol Bindable: class {
     var presenter: Presenter? { get set }
 
     func setup(_ presenter: Presenter)
+    func moduleDidLoad()
 }
 
 public extension Bindable where Self: UIView {
     func setup(_ presenter: Presenter) {
         self.presenter = presenter
         layoutIfNeeded()
+        moduleDidLoad()
     }
 }

@@ -14,4 +14,10 @@ public struct Response<T: Codable>: Codable {
 
     public let code: Int
     public let response: T
+
+    public init(_ code: Int = 0,
+                response: T) {
+        self.code = code
+        self.response = response
+    }
 }
