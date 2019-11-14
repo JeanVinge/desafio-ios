@@ -2,11 +2,6 @@
 
 Este desafio foi feito para a [Avaliação para Engenheiro de Software iOS Peixe Urbano / Groupon LATAM](https://github.com/JeanVinge/desafio-ios/blob/master/Avaliacao.md)
 
-- [Funcionalidades](#features)
-- [Requisitos](#requirements)
-- [Instalação](#installation)
-- [Arquitetura](#architecture)
-
 ## Requisitos
 
 - [x] xcode 11.2.1 ou superior
