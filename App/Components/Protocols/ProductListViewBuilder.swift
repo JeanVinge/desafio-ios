@@ -27,7 +27,8 @@ struct ProductListViewBuilder: ControllerBuilder {
                 notifier: item.notifier)
             )
         )
+        let navigation = NavigationController(rootViewController: vc)
         decorator.insert(in: vc)
-        return NavigationController(rootViewController: vc)
+        return navigation
     }
 }
