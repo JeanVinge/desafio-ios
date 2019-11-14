@@ -79,6 +79,7 @@ extension BottomView: ContentConvertible {
     }
 
     func setup(with data: Deal) {
+        clear()
         descriptionLabel.text = data.description
         priceView.setup(with: data)
     }

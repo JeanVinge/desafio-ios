@@ -36,7 +36,7 @@ public protocol Bindable: class {
 public extension Bindable where Self: UIView {
     func setup(_ presenter: Presenter) {
         self.presenter = presenter
-        layoutIfNeeded()
         moduleDidLoad(false)
+        layoutIfNeeded()
     }
 }

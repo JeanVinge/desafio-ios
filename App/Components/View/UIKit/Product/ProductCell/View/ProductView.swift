@@ -45,13 +45,17 @@ final class ProductView: GenericView, Bindable {
             $0.top.equalToSuperView()
             $0.left.equalToSuperView()
             $0.right.equalToSuperView()
+            $0.height.constraint(equalToConstant: 300)
         }
         bottomView.layout {
             $0.top.equal(to: topImageView.bottomAnchor,
                          offsetBy: 10)
             $0.left.equalToSuperView(20)
             $0.right.equalToSuperView(-20)
-            $0.bottom.equalToSuperView(-10)
+            let bottom = bottomView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            bottom.constant = -10
+            bottom.priority = .defaultHigh
+            bottom.isActive = true
         }
     }
 
