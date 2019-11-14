@@ -107,6 +107,13 @@ public class BadgeBarButtonItem: UIBarButtonItem, ConfigurableView {
         }
     }
 
+    public func setBadge(_ count: Int) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.badge = count
+        }
+    }
+
     deinit {
         self.removeObserver(self, forKeyPath: "view")
     }

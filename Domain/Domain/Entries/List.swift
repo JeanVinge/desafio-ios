@@ -17,6 +17,10 @@ public struct List: Codable {
     public init(_ deals: [Deal] = []) {
         self.deals = deals
     }
+
+    public var selectedCount: Int {
+        return deals.filter { $0.isSelected }.count
+    }
 }
 
 public typealias ProductList = Response<List>

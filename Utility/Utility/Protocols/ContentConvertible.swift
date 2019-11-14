@@ -14,7 +14,6 @@ public protocol ContentConvertible {
     init()
 
     func setup(with data: Content)
-    func prepareForReuse()
 }
 
 extension ContentConvertible where Content == Void {

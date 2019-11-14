@@ -22,8 +22,12 @@
 		384B5339237601AE00AA9538 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B5337237601AE00AA9538 /* Configuration.swift */; };
 		384B533B2376038300AA9538 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B533A2376038300AA9538 /* Service.swift */; };
 		384B53412376597F00AA9538 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B533E2376597F00AA9538 /* URLSession+Extensions.swift */; };
-		384B53752377192900AA9538 /* ListUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53742377192900AA9538 /* ListUseCases.swift */; };
-		3867DC47237B8A39004896A8 /* ListFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC46237B8A39004896A8 /* ListFetcher.swift */; };
+		384B53752377192900AA9538 /* InCityUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B53742377192900AA9538 /* InCityUseCases.swift */; };
+		3867DC47237B8A39004896A8 /* InCityFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC46237B8A39004896A8 /* InCityFetcher.swift */; };
+		3867DC4C237B9433004896A8 /* ProductsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC4B237B9433004896A8 /* ProductsFetcher.swift */; };
+		3867DC4E237B944F004896A8 /* TravelsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC4D237B944F004896A8 /* TravelsFetcher.swift */; };
+		3867DC50237B9491004896A8 /* ProductsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC4F237B9491004896A8 /* ProductsUseCases.swift */; };
+		3867DC52237B949D004896A8 /* TravelsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC51237B949D004896A8 /* TravelsUseCases.swift */; };
 		3889FB0C237A29BB00F18D64 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB0B237A29BB00F18D64 /* Domain.framework */; };
 		3889FB0D237A29BB00F18D64 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB0B237A29BB00F18D64 /* Domain.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3889FB10237A29C100F18D64 /* Future.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB0F237A29C100F18D64 /* Future.framework */; };
@@ -75,8 +79,12 @@
 		384B5337237601AE00AA9538 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		384B533A2376038300AA9538 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		384B533E2376597F00AA9538 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
-		384B53742377192900AA9538 /* ListUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUseCases.swift; sourceTree = "<group>"; };
-		3867DC46237B8A39004896A8 /* ListFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFetcher.swift; sourceTree = "<group>"; };
+		384B53742377192900AA9538 /* InCityUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCityUseCases.swift; sourceTree = "<group>"; };
+		3867DC46237B8A39004896A8 /* InCityFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCityFetcher.swift; sourceTree = "<group>"; };
+		3867DC4B237B9433004896A8 /* ProductsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsFetcher.swift; sourceTree = "<group>"; };
+		3867DC4D237B944F004896A8 /* TravelsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsFetcher.swift; sourceTree = "<group>"; };
+		3867DC4F237B9491004896A8 /* ProductsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUseCases.swift; sourceTree = "<group>"; };
+		3867DC51237B949D004896A8 /* TravelsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsUseCases.swift; sourceTree = "<group>"; };
 		3889FB05237A28EF00F18D64 /* Future.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Future.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3889FB0B237A29BB00F18D64 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3889FB0F237A29C100F18D64 /* Future.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Future.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,7 +199,9 @@
 		384B53732377190F00AA9538 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				384B53742377192900AA9538 /* ListUseCases.swift */,
+				384B53742377192900AA9538 /* InCityUseCases.swift */,
+				3867DC4F237B9491004896A8 /* ProductsUseCases.swift */,
+				3867DC51237B949D004896A8 /* TravelsUseCases.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -199,7 +209,9 @@
 		3867DC45237B89FF004896A8 /* ListFetcher */ = {
 			isa = PBXGroup;
 			children = (
-				3867DC46237B8A39004896A8 /* ListFetcher.swift */,
+				3867DC46237B8A39004896A8 /* InCityFetcher.swift */,
+				3867DC4B237B9433004896A8 /* ProductsFetcher.swift */,
+				3867DC4D237B944F004896A8 /* TravelsFetcher.swift */,
 			);
 			path = ListFetcher;
 			sourceTree = "<group>";
@@ -328,13 +340,17 @@
 				384B52B72374D87000AA9538 /* Method.swift in Sources */,
 				384B53342376005900AA9538 /* TargetType.swift in Sources */,
 				384B52B62374D87000AA9538 /* ParameterEncoding.swift in Sources */,
-				384B53752377192900AA9538 /* ListUseCases.swift in Sources */,
+				384B53752377192900AA9538 /* InCityUseCases.swift in Sources */,
+				3867DC4C237B9433004896A8 /* ProductsFetcher.swift in Sources */,
 				384B533B2376038300AA9538 /* Service.swift in Sources */,
 				384B53412376597F00AA9538 /* URLSession+Extensions.swift in Sources */,
 				384B52B52374D87000AA9538 /* RequestAPIAdapter.swift in Sources */,
-				3867DC47237B8A39004896A8 /* ListFetcher.swift in Sources */,
+				3867DC4E237B944F004896A8 /* TravelsFetcher.swift in Sources */,
+				3867DC47237B8A39004896A8 /* InCityFetcher.swift in Sources */,
+				3867DC50237B9491004896A8 /* ProductsUseCases.swift in Sources */,
 				384B52B42374D87000AA9538 /* URLConvertible.swift in Sources */,
 				384B5339237601AE00AA9538 /* Configuration.swift in Sources */,
+				3867DC52237B949D004896A8 /* TravelsUseCases.swift in Sources */,
 				384B52B82374D87000AA9538 /* Response.swift in Sources */,
 				384B52BA2374D87000AA9538 /* SessionAdapter.swift in Sources */,
 				388A4B61237B76B900E9F3F0 /* Future+Response.swift in Sources */,

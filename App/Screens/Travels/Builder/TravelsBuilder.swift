@@ -12,15 +12,22 @@ import Resources
 
 struct TravelsBuilder: ControllerBuilder {
 
+    // MARK: Var
+
+    let heartButton: BadgeBarButtonItem
+    let notifyBarButton: NavigationBarPromise
+
     // MARK: Init
 
-    static func build() -> UIViewController {
-        let presenter = TravelsPresenter()
-        let vc = ViewController<TravelsView>(L10n.Tabbar.travels,
-                                           tabbarImage: Asset.icPlane.image)
-        vc.baseView.setup(presenter)
-        let nav = NavigationController(rootViewController: vc)
-        NavigationBarButtons.insert(in: vc)
-        return nav
+    func build() -> UIViewController {
+        return ProductListViewBuilder(
+            item:
+            TravelsViewBuilder(
+                heartButton: heartButton,
+                tabbarTitle: L10n.Tabbar.travels,
+                tabbarImage: Asset.icPlane.image,
+                notifyBarButton: notifyBarButton
+            )
+        ).build()
     }
 }

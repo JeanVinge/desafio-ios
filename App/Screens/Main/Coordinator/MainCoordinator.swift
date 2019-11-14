@@ -13,7 +13,7 @@ final class MainCoordinator: Coordinator {
 
     // MARK: Var
 
-    private lazy var tabbarController = MainBuilder.build()
+    private lazy var tabbarController = MainBuilder().build()
 
     // MARK: Init
 

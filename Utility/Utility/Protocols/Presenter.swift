@@ -12,6 +12,16 @@ public protocol Presenter {
     associatedtype Input
     associatedtype Output
     func transform(_ input: Input) -> Output
+    func transform() -> Output
+}
+
+public extension Presenter {
+    func transform(_ input: Input) -> Output {
+        fatalError("Presenter not implemented")
+    }
+    func transform() -> Output {
+        fatalError("Presenter not implemented")
+    }
 }
 
 public protocol Bindable: class {
@@ -20,13 +30,13 @@ public protocol Bindable: class {
     var presenter: Presenter? { get set }
 
     func setup(_ presenter: Presenter)
-    func moduleDidLoad()
+    func moduleDidLoad(_ forceRefresh: Bool)
 }
 
 public extension Bindable where Self: UIView {
     func setup(_ presenter: Presenter) {
         self.presenter = presenter
         layoutIfNeeded()
-        moduleDidLoad()
+        moduleDidLoad(false)
     }
 }

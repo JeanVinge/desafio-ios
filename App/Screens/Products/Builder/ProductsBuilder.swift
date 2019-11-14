@@ -9,18 +9,27 @@
 import UIKit
 import Utility
 import Resources
+import Domain
+import NetworkLayer
 
 struct ProductsBuilder: ControllerBuilder {
 
+    // MARK: Var
+
+    let heartButton: BadgeBarButtonItem
+    let notifyBarButton: NavigationBarPromise
+
     // MARK: Init
 
-    static func build() -> UIViewController {
-        let presenter = ProductsPresenter()
-        let vc = ViewController<ProductsView>(L10n.Tabbar.products,
-                                              tabbarImage: Asset.icBag.image)
-        vc.baseView.setup(presenter)
-        let nav = NavigationController(rootViewController: vc)
-        NavigationBarButtons.insert(in: vc)
-        return nav
+    func build() -> UIViewController {
+        return ProductListViewBuilder(
+            item:
+            ProductsViewBuilder(
+                heartButton: heartButton,
+                tabbarTitle: L10n.Tabbar.products,
+                tabbarImage: Asset.icBag.image,
+                notifyBarButton: notifyBarButton
+            )
+        ).build()
     }
 }

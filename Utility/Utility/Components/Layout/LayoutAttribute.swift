@@ -41,8 +41,7 @@ public extension LayoutAttribute {
                           constant: constant).isActive = true
     }
 
-    func lessThanOrEqualToSuperView(to otherAnchor: Anchor,
-                                    offsetBy constant: CGFloat = 0) {
+    func lessThanOrEqualToSuperView(_ constant: CGFloat = 0) {
         guard let superView = superViewAnchor else { return }
         anchor.constraint(lessThanOrEqualTo: superView,
                           constant: constant).isActive = true

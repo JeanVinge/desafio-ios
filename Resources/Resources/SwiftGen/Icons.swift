@@ -22,6 +22,7 @@ public enum Asset {
   public static let icStar = ImageAsset(name: "ic_star")
   public static let icHeart = ImageAsset(name: "ic_heart")
   public static let icHeartFilled = ImageAsset(name: "ic_heart_filled")
+  public static let icPlaceholder = ImageAsset(name: "ic_placeholder")
   public static let icCart = ImageAsset(name: "ic_cart")
   public static let icFilter = ImageAsset(name: "ic_filter")
   public static let icBag = ImageAsset(name: "ic_bag")

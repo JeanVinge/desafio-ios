@@ -12,6 +12,11 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 public enum L10n {
 
+  public enum Product {
+    /// Starting at  
+    public static let priceStartingAt = L10n.tr("localizable", "product.price-starting-at")
+  }
+
   public enum Tabbar {
     /// In city
     public static let icTheCity = L10n.tr("localizable", "tabbar.ic-the-city")

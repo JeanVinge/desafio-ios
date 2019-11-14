@@ -9,3 +9,5 @@
 "tabbar.ic-the-city" = "Na cidade";
 "tabbar.travels" = "Viagens";
 "tabbar.products" = "Produtos";
+
+"product.price-starting-at" = "A partir de  ";

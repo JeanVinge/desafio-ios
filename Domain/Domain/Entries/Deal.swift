@@ -19,6 +19,7 @@ public struct Deal: Codable {
         case imageURL = "dealImage"
         case fullPrice = "full_price"
         case salePrice = "sale_price"
+        case isLiked
     }
 
     public let id: String
@@ -28,22 +29,26 @@ public struct Deal: Codable {
     public let fullPrice: Double
     public let salePrice: Double
 
-    public var isLiked: Bool = false
+    private var isLiked: Bool?
 
-    init(_ deal: Deal) {
+    public var isSelected: Bool {
+        return isLiked ?? false
+    }
+
+    public init(_ deal: Deal,
+                isLiked: Bool) {
         id = deal.id
         title = deal.title
-        description = deal.title
+        description = deal.description
         imageURL = deal.imageURL
         fullPrice = deal.fullPrice
         salePrice = deal.salePrice
-        isLiked = true
+        self.isLiked = isLiked
     }
 }
 
 extension Deal: Equatable {
     public static func == (lhs: Deal, rhs: Deal) -> Bool {
-        return lhs.id == rhs.id &&
-            lhs.description == rhs.description
+        return lhs.id == rhs.id
     }
 }

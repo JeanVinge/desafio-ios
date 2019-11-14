@@ -20,12 +20,9 @@ extension Response: StoredObject where T == List {
     public static func from(primitive: Data) -> Response<T>? {
         return try? JSONDecoder().decode(Response<T>.self, from: primitive)
     }
-
-    func save(_ key: PersistenceKey) {
-    }
 }
 
-public enum Persistence: String, PersistenceKey {
+public enum Persistence: String, PersistenceKey, CaseIterable {
     case inCity
     case travels
     case products

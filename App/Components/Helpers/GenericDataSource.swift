@@ -8,17 +8,18 @@
 
 import UIKit
 import Utility
+import Future
 
-class GenericDataSource<T: Any>: NSObject, UITableViewDataSource, UITableViewDelegate {
+final class GenericDataSource<T: Any>: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: Var
 
     var items: [T] = []
-    let tableView: UITableView
+    let tableView: TableView
 
     // MARK: Init
 
-    init(_ tableView: UITableView) {
+    init(_ tableView: TableView) {
         self.tableView = tableView
         super.init()
     }
@@ -28,12 +29,13 @@ class GenericDataSource<T: Any>: NSObject, UITableViewDataSource, UITableViewDel
         self.tableView.delegate = self
     }
 
-    func reload(_ items: [T]) {
+    func setItems(_ items: [T]) {
         self.items = items
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.tableView.reloadData()
-        }
+    }
+
+    func reload(_ items: [T]) {
+        setItems(items)
+        tableView.dispatchReloadData()
     }
 
     // MARK: UITableViewDataSource
@@ -45,6 +47,8 @@ class GenericDataSource<T: Any>: NSObject, UITableViewDataSource, UITableViewDel
     // MARK: UITableViewDelegate
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeue(reusable: ProductCell.self, at: indexPath, with: items[indexPath.row])
+        return tableView.dequeue(reusable: ProductCell.self,
+                                 at: indexPath,
+                                 with: items[indexPath.row])
     }
 }

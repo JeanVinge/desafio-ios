@@ -222,16 +222,56 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		388A4B59237B6C7200E9F3F0 /* UIKit */ = {
+		387C1B88237CD958002954DE /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		387C1B89237CD966002954DE /* UITabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */,
+			);
+			path = UITabBarController;
+			sourceTree = "<group>";
+		};
+		387C1B8A237CD972002954DE /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
 				384B52C82374E02600AA9538 /* UITableView+Extensions.swift */,
 				384B52C92374E02600AA9538 /* UITableViewCell+Extensions.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		387C1B8B237CD981002954DE /* UIView */ = {
+			isa = PBXGroup;
+			children = (
 				384B538B23796E2900AA9538 /* UIVew+Extensions.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		387C1B8C237CD98D002954DE /* UIGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
 				384B5399237A185700AA9538 /* UIPanGestureRecognizer+Extensions.swift */,
+			);
+			path = UIGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		388A4B59237B6C7200E9F3F0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				387C1B8C237CD98D002954DE /* UIGestureRecognizer */,
+				387C1B8B237CD981002954DE /* UIView */,
+				387C1B8A237CD972002954DE /* UITableView */,
+				387C1B89237CD966002954DE /* UITabBarController */,
+				387C1B88237CD958002954DE /* UIViewController */,
 				384B539D237A1E3500AA9538 /* UIBarButtonItem+Extensions.swift */,
-				384B539F237A1F7800AA9538 /* UITabbarController+Extensions.swift */,
-				384B53A1237A20A400AA9538 /* UIViewController+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";

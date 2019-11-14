@@ -9,18 +9,28 @@
 import UIKit
 import Utility
 import Resources
+import Future
+import Domain
 
 struct NavigationBarButtons {
-    static func insert(in viewController: UIViewController) {
-        let heart = BadgeBarButtonItem(Asset.icHeart.image)
+
+    // MARK: Var
+
+    let heartButton: BadgeBarButtonItem
+    let cityButton = UIBarButtonItem(customView: CityButton("Florianopolis"))
+    let cartButton = UIBarButtonItem(Asset.icCart.image)
+    let filterButton = UIBarButtonItem(Asset.icFilter.image)
+
+    // MARK: Init
+
+    func insert(in viewController: UIViewController) {
         viewController.navigationItem.setLeftBarButton(
-            UIBarButtonItem(customView: CityButton("Florianopolis")),
+            cityButton,
             animated: false)
         viewController.navigationItem.setRightBarButtonItems([
-            UIBarButtonItem(Asset.icCart.image),
-            heart,
-            UIBarButtonItem(Asset.icFilter.image)
+            cartButton,
+            heartButton,
+            filterButton
         ], animated: false)
-        heart.badge = 12
     }
 }

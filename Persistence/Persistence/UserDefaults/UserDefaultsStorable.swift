@@ -27,7 +27,7 @@ public struct UserDefaultsStorable<Object> where Object: StoredObject {
 
     public func get() -> Object? {
         guard let p = store.value(forKey: key.name()) as? Object.Primitive else { return nil }
-        return Object.from(primitive: p)
+        return .from(primitive: p)
     }
 }
 

@@ -24,11 +24,4 @@ public class TableView: UITableView {
     @objc private func didLoad() {
         onRefresh?()
     }
-
-    func endRefreshing() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.refreshControl?.endRefreshing()
-        }
-    }
 }

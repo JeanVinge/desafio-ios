@@ -37,4 +37,18 @@ public extension UITableView {
         register(T.self,
                  forCellReuseIdentifier: reusable.reusableIdentifier)
     }
+
+    func dispatchReloadData() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.reloadData()
+        }
+    }
+
+    func endRefreshing() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.refreshControl?.endRefreshing()
+        }
+    }
 }

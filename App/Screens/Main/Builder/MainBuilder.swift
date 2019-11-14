@@ -17,7 +17,7 @@ struct MainBuilder: ControllerBuilder {
 
     // MARK: Init
 
-    static func build() -> UITabBarController {
+    func build() -> UITabBarController {
         let tabbar = UITabBarController()
         tabbar.tabBar.tintColor = .peixeUrbanoOrange
         return tabbar

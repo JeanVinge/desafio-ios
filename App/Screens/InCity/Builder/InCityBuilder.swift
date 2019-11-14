@@ -12,15 +12,22 @@ import Resources
 
 struct InCityBuilder: ControllerBuilder {
 
+    // MARK: Var
+
+    let heartButton: BadgeBarButtonItem
+    let notifyBarButton: NavigationBarPromise
+
     // MARK: Init
 
-    static func build() -> UIViewController {
-        let presenter = InCityPresenter()
-        let vc = ViewController<InCityView>(L10n.Tabbar.icTheCity,
-                                            tabbarImage: Asset.icBuilding.image)
-        vc.baseView.setup(presenter)
-        let nav = NavigationController(rootViewController: vc)
-        NavigationBarButtons.insert(in: vc)
-        return nav
+    func build() -> UIViewController {
+        return ProductListViewBuilder(
+            item:
+            InCityViewBuilder(
+                heartButton: heartButton,
+                tabbarTitle: L10n.Tabbar.icTheCity,
+                tabbarImage: Asset.icBuilding.image,
+                notifyBarButton: notifyBarButton
+            )
+        ).build()
     }
 }
