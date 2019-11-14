@@ -1,52 +1,62 @@
-# Avaliação para Engenheiro de Software iOS Peixe Urbano / Groupon LATAM
+![Travis](https://travis-ci.org/JeanVinge/desafio-ios.svg?branch=master)
 
-## Para esse teste ser avaliado, você precisará:
-* criar um repositório no Github para este projeto;
-* adicionar como colaboradores do projeto os usuarios: [dbonates](https://github.com/dbonates), [insidegui](https://github.com/insidegui), [rafaelbletro](https://github.com/rafaelbletro) e [ped1256](https://github.com/ped1256);
-* notificar a empresa avisando que o teste está disponível para verificação.
+Este desafio foi feito para a [Avaliação para Engenheiro de Software iOS Peixe Urbano / Groupon LATAM](https://github.com/JeanVinge/desafio-ios/blob/master/Avaliacao.md)
 
-### Objetivo
+## Requisitos
 
-Seu desafio é recriar a home do aplicativo do Peixe Urbano para iOS, utilizando os dados dos arquivos JSON listados abaixo.
+- [x] xcode 11.2.1 ou superior
+- [x] bundler versão 2 ou superior
 
-A home do app que você irá criar deve consistir em uma tab bar com três abas: Na Cidade, Viagens e Produtos. Cada aba deve listar as ofertas dos arquivos JSON correspondentes, que devem ser baixados diretamente das URLs (não armazenados dentro do app).
+## Funcionalidades
 
-Exemplo do que esperamos ver do seu desafio:
+- [x] Suporte iPhones menores "Iphone 5s", orientação portrait
+- [x] Armazenamento local das ofertas baixadas (offline-first)
+- [x] Desenvolver o teste sem utilizar Interface Builder
+- [x] Listagem de em cidades, viagens e produtos
+- [x] botão de like selecionando e persistindo produtos
+- [x] CI com travis
 
-![demo-ui](https://f001.backblazeb2.com/file/grtests/demo-ui.jpeg) ![demo-ui-gif](https://f001.backblazeb2.com/file/grtests/demo-ui.gif)
+## Instalação
 
-Estas são as URLs para o conteúdo de cada aba (no formato json):
+Para executar o desafio antes voce precisa executar os seguintes passos:
 
-- Na Cidade: https://gist.githubusercontent.com/insidegui/2b1f747ebeb9070e33818bf857e28a84/raw/5da63767fda2ec16f4ae0718e3be4be75001fe10/florianopolis.json
+- bundle install "recomendado versão 2 ou superior"
+- bundle exec pod install
+- Abrir App.xcworkspace
+- Executar scheme App
 
-- Viagens: https://gist.githubusercontent.com/insidegui/d2665b556f2be1b1ad3a19d2ef9bcc44/raw/afe1e0a9563e3bcddc3796b22becb8f12f82ee2e/viagens.json
+## Arquitetura
 
-- Produtos: https://gist.githubusercontent.com/insidegui/007fd6664650391dca199e6784d1f351/raw/862d701c69307f9e9053f8cb1ec438586fca4b64/produtos.json
+O desafio foi feito de forma modular, tentando separar o maximo as responsabilidades do Aplicativo, como por exemplo requisições, modelos, temas, strings e etc. o motivo desta escolha de paradigma foi para maximizar o reuso do codigo assim podendo criar bibliotecas atraves desses modulos.
 
-Cada item na listagem deve obrigatoriamente exibir ao menos a primeira foto, o título, nome do parceiro e o preço de cada oferta. Procure seguir o design do nosso app Peixe Urbano que está na loja, ou se guie pelas imagens acima.
+A arquitetura utilizada é uma mistura de Clean Architecture por conta da separação de modulos com MVP, tentando ser bem simples e fazendo um reuso robusto do codigo.
 
-## Detalhes técnicos a serem observados:
+## O que significa?
 
-- Seu app deve suportar devices a partir do iPhone 5s. Não é necessário ser um app universal, pode suportar somente iPhones.
-- Se preferir, pode fazer o teste em um Playground, desde que organize os arquivos adequadamente utilizando auxiliary sources.
-- O app do teste deve ser feito na versão mais recente do Swift e do Xcode.
-- É permitido o uso de dependência (CocoaPods, Carthage, etc) somente para download e cache das imagens consumidas da internet.
+- MVP: O Model View Presenter, no caso do desafio eu optei por utilizar desta forma para tirar a logica da viewcontroller, e separar em uma camada te de flexibilidade para reutilizar a logica de negocio, e fazer com que a view não tenha muita complexidade fazendo que ela cuide apenas de desenhar os componentes na tela.
 
-## Pontos extras:
+- Coordinator: Utilizei o conceito simples do coordinator, do [Soroush Khanlou](https://www.youtube.com/watch?v=a1g3k3NObkE), que é um conceito bem simples que separa a navegação da viewcontroller, e com isso tire outra responsabilidade da viewcontroller.
 
-Os itens abaixo não são obrigatórios, mas serão considerados na avaliação caso você consiga fazê-los:
+- Future/Promise: A future ajuda com o callback hell gerado por codigo utilizado por closures, o future simplifica e ao inves de retornar completions blocks, é retornado objetos de Future que contem metodos para observar resposta de uma chamada assincrona, eu me inspirei no codigo do [John Sundell](https://www.swiftbysundell.com/articles/under-the-hood-of-futures-and-promises-in-swift/) que é muito efetivo e simples.
 
-- Listagem de banners no topo da lista. Os banners também estão nos arquivos JSON fornecidos.
-- Armazenamento local das ofertas baixadas (offline-first).
-- Adicionar uma nova aba que exibe as ofertas da cidade em um mapa.
-- Desenvolver o teste sem utilizar Interface Builder (storyboards/xibs).
+- View/Code: Para criação de layout eu utilizei um wrapper do NSLayoutAnchor, esse codigo eu já tenho um repositorio chamado [Tanjiro](https://github.com/JeanVinge/Tanjiro), então para isso eu importei ele no desafio, o Tanjiro é bem parecido com o [SnapKit](https://github.com/SnapKit/SnapKit).
 
+- Preferir Protocolos ao inves de classes: Quando voces olharem o desafio, verão que existe muita abstração no codigo, e muito uso de protocolo, a minha escolha é por conta do reuso de codigo, facilidade para criar mock de testes, generalização de codigo e interfaces, dando assim mais liberdade para criar a partir de alguma interface, e como conselho da apple prefira protocolos ao inves de classe, claro que nao da para levar ao pé da letra porem ajuda em varios casos.
 
-## O que será avaliado:
+## Separação do Desafio
 
-- Arquitetura escolhida para desenvolvimento do teste.
-- Qualidade do código.
-- Abstração das diferentes camadas.
-- Adoção de boas práticas recomendadas pela Apple no uso das APIs e no visual do app.
-- Funcionamento do produto entregue.
-- Documentação do projeto.
+Quando baixado o desafio é possivel ver que existem varios projetos dentro do App.workspace, aqui vou explicar cada um:
+
+- App: O Projeto do app é onde acontece todo o funcionamento do aplicativo, o App consiste em receber todas as dependencias, Utility, Resources etc, e utilizar para fazer o App de fato.
+
+- Utility: o modulo de utility é usado para guardar extensoes, componentes, e coisas que facilitem o desenvolvimento do app, o seu principal objeto é ter como se fosse uma bolsa de ferramentas para que quando eu precise eu importe e use a ferramenta desejada.
+
+- Resources: o modo de resources guarda coisas ligadas a tema, por exemplo strings de localizable, imagens de icones etc.
+
+- NetworkLayer: a camada de network faz todo o tratamento para uma requisição, e devolve para o app interfaces já implementadas para que seja possivel acessar API's.
+
+- Domain: o domain se refere a todo contrato usado pelo App, tudo que a camada de internet precisa de informação ao receber um json fica la.
+
+- Future: esse modulo como eu me referi acima é sobre a biblioteca de future que ajuda o app com requisicoes assincronas.
+
+- Persistence: a camada de persistencia tem algumas interfaces que possibilitam criar novas persistencias, e a persistencia utilizada no projeto que no caso foi o UserDefaults, nesse modulo tem toda abstração e wrapper para facilitar o uso no app.
