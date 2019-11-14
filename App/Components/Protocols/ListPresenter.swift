@@ -9,8 +9,5 @@
 import Domain
 
 protocol ListPresenter {
-
-    var configuration: ListConfiguration { get }
-
     init(_ configuration: ListConfiguration)
 }

@@ -50,11 +50,11 @@ struct HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: NavigationBadgeNotifier {
-    
+
     func update() {
         notify()
     }
-    
+
     func notify() {
         let count = Persistence
             .allCases
