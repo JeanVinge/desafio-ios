@@ -134,7 +134,7 @@
 		384B52282374D79100AA9538 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				3867DC45237B89FF004896A8 /* ListFetcher */,
+				3867DC45237B89FF004896A8 /* Fetchers */,
 				384B53732377190F00AA9538 /* UseCases */,
 				384B533C2376597F00AA9538 /* Extensions */,
 				384B5335237601AE00AA9538 /* Environment */,
@@ -149,6 +149,8 @@
 		384B52332374D79100AA9538 /* NetworkLayerTests */ = {
 			isa = PBXGroup;
 			children = (
+				387C1B90237CEEEF002954DE /* UseCases */,
+				387C1B8F237CEED6002954DE /* Fetchers */,
 				384B52342374D79200AA9538 /* NetworkLayerTests.swift */,
 				384B52362374D79200AA9538 /* Info.plist */,
 			);
@@ -206,14 +208,28 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		3867DC45237B89FF004896A8 /* ListFetcher */ = {
+		3867DC45237B89FF004896A8 /* Fetchers */ = {
 			isa = PBXGroup;
 			children = (
 				3867DC46237B8A39004896A8 /* InCityFetcher.swift */,
 				3867DC4B237B9433004896A8 /* ProductsFetcher.swift */,
 				3867DC4D237B944F004896A8 /* TravelsFetcher.swift */,
 			);
-			path = ListFetcher;
+			path = Fetchers;
+			sourceTree = "<group>";
+		};
+		387C1B8F237CEED6002954DE /* Fetchers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fetchers;
+			sourceTree = "<group>";
+		};
+		387C1B90237CEEEF002954DE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		3889FB04237A28EF00F18D64 /* Frameworks */ = {
