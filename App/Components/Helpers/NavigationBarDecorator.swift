@@ -1,5 +1,5 @@
 //
-//  NavigationBarButtons.swift
+//  NavigationBarDecorator.swift
 //  App
 //
 //  Created by jean.vinge on 11/11/19.
@@ -12,7 +12,7 @@ import Resources
 import Future
 import Domain
 
-struct NavigationBarButtons {
+struct NavigationBarDecorator {
 
     // MARK: Var
 

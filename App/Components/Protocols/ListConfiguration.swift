@@ -10,27 +10,27 @@ import Domain
 import NetworkLayer
 
 protocol ListConfiguration {
-    var navigation: NavigationBarButtons { get }
+    var decorator: NavigationBarDecorator { get }
     var fetcher: Domain.ListFetcher { get }
     var notifyBarButton: NavigationBarPromise { get }
 
-    init(navigation: NavigationBarButtons,
+    init(decorator: NavigationBarDecorator,
          fetcher: Domain.ListFetcher,
          notifyBarButton: NavigationBarPromise)
 }
 
 extension ListConfiguration {
-    init(navigation: NavigationBarButtons,
+    init(decorator: NavigationBarDecorator,
          fetcher: Domain.ListFetcher,
          notifyBarButton: NavigationBarPromise) {
-        self.init(navigation: navigation,
+        self.init(decorator: decorator,
                   fetcher: fetcher,
                   notifyBarButton: notifyBarButton)
     }
 }
 
 struct ContreteConfiguration: ListConfiguration {
-    var navigation: NavigationBarButtons
+    var decorator: NavigationBarDecorator
     var fetcher: Domain.ListFetcher
     var notifyBarButton: NavigationBarPromise
 }

@@ -18,18 +18,16 @@ struct ProductListViewBuilder: ControllerBuilder {
     // MARK: Init
 
     func build() -> UIViewController {
-        let buttons = NavigationBarButtons(heartButton: item.heartButton)
-        let presenter = ProductListPresenter(
-                ContreteConfiguration(
-                    navigation: buttons,
-                    fetcher: item.fetcher,
-                    notifyBarButton: item.notifyBarButton
-                )
-            )
+        let decorator = NavigationBarDecorator(heartButton: item.heartButton)
         let vc = ProductListViewController(item.tabbarTitle, tabbarImage: item.tabbarImage)
-        vc.baseView.setup(presenter)
-        let nav = NavigationController(rootViewController: vc)
-        buttons.insert(in: vc)
-        return nav
+        vc.baseView.setup(ProductListPresenter(
+            ContreteConfiguration(
+                decorator: decorator,
+                fetcher: item.fetcher,
+                notifyBarButton: item.notifyBarButton
+            )
+        ))
+        decorator.insert(in: vc)
+        return NavigationController(rootViewController: vc)
     }
 }
