@@ -16,11 +16,11 @@ struct ProductListPresenter: ListPresenter {
     typealias Input = ProductInput
     typealias Output = ProductOutput
 
-    var configuration: ListConfiguration
+    var configuration: Configuration
 
     // MARK: Init
 
-    init(_ configuration: ListConfiguration) {
+    init(_ configuration: Configuration) {
         self.configuration = configuration
     }
 

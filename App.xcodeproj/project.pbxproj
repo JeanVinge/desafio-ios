@@ -39,7 +39,7 @@
 		3867DC5C237B9FBF004896A8 /* ProductItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC5B237B9FBF004896A8 /* ProductItemPresenter.swift */; };
 		3867DC5E237BA0FE004896A8 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC5D237BA0FE004896A8 /* PriceView.swift */; };
 		3867DC60237BA124004896A8 /* TopImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DC5F237BA124004896A8 /* TopImageView.swift */; };
-		38723A88237CBC090072091F /* ListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38723A87237CBC090072091F /* ListConfiguration.swift */; };
+		38723A88237CBC090072091F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38723A87237CBC090072091F /* Configuration.swift */; };
 		38723A8A237CC16E0072091F /* Product+InputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38723A89237CC16E0072091F /* Product+InputOutput.swift */; };
 		3889FB09237A29A200F18D64 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3347D91C6A85E1C413ED3C6 /* Pods_App.framework */; };
 		3889FB0A237A29A200F18D64 /* Pods_App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3347D91C6A85E1C413ED3C6 /* Pods_App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -114,7 +114,7 @@
 		3867DC5B237B9FBF004896A8 /* ProductItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemPresenter.swift; sourceTree = "<group>"; };
 		3867DC5D237BA0FE004896A8 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		3867DC5F237BA124004896A8 /* TopImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageView.swift; sourceTree = "<group>"; };
-		38723A87237CBC090072091F /* ListConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConfiguration.swift; sourceTree = "<group>"; };
+		38723A87237CBC090072091F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		38723A89237CC16E0072091F /* Product+InputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+InputOutput.swift"; sourceTree = "<group>"; };
 		3889FB1B237A332600F18D64 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		38C8BD42237C38D600C00EB6 /* Domain+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Domain+Extensions.swift"; sourceTree = "<group>"; };
@@ -159,6 +159,7 @@
 		38109AF2237CD492008D3D16 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				38DD8E27237D930600D75AA0 /* Helper */,
 				38DD8E26237D911B00D75AA0 /* Protocols */,
 				38109AF4237CD4A2008D3D16 /* View */,
 				38109AF3237CD49C008D3D16 /* Presenter */,
@@ -461,7 +462,6 @@
 		38C8BD44237C390300C00EB6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				38723A87237CBC090072091F /* ListConfiguration.swift */,
 				38109AEA237CD279008D3D16 /* ProductListViewBuilder.swift */,
 				38109AEC237CD2C8008D3D16 /* ProductItemBuilder.swift */,
 			);
@@ -475,6 +475,14 @@
 				38C8BD47237C395900C00EB6 /* ListView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		38DD8E27237D930600D75AA0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				38723A87237CBC090072091F /* Configuration.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		3BDCB85A7F1BF172577105C1 /* Frameworks */ = {
@@ -716,7 +724,7 @@
 				384B53102375F0FC00AA9538 /* InCityBuilder.swift in Sources */,
 				38109AF1237CD44E008D3D16 /* ProductListPresenter.swift in Sources */,
 				3867DC60237BA124004896A8 /* TopImageView.swift in Sources */,
-				38723A88237CBC090072091F /* ListConfiguration.swift in Sources */,
+				38723A88237CBC090072091F /* Configuration.swift in Sources */,
 				384B539C237A1B6D00AA9538 /* NavigationViewController.swift in Sources */,
 				38C8BD4D237C7F8E00C00EB6 /* BottomView.swift in Sources */,
 				384B53912379AEFA00AA9538 /* CityButton.swift in Sources */,

@@ -21,7 +21,7 @@ struct ProductListViewBuilder: ControllerBuilder {
         let decorator = NavigationBarDecorator(heartButton: item.heartButton)
         let vc = ProductListViewController(item.tabbarTitle, tabbarImage: item.tabbarImage)
         vc.baseView.setup(ProductListPresenter(
-            ContreteConfiguration(
+            Configuration(
                 decorator: decorator,
                 fetcher: item.fetcher,
                 notifier: item.notifier)

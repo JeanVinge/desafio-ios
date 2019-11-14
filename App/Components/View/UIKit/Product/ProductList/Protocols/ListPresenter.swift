@@ -9,5 +9,5 @@
 import Utility
 
 protocol ListPresenter: Presenter {
-    init(_ configuration: ListConfiguration)
+    init(_ configuration: Configuration)
 }
