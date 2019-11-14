@@ -159,6 +159,7 @@
 		38109AF2237CD492008D3D16 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				38DD8E26237D911B00D75AA0 /* Protocols */,
 				38109AF4237CD4A2008D3D16 /* View */,
 				38109AF3237CD49C008D3D16 /* Presenter */,
 			);
@@ -460,11 +461,18 @@
 		38C8BD44237C390300C00EB6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				38C8BD45237C390F00C00EB6 /* ListPresenter.swift */,
-				38C8BD47237C395900C00EB6 /* ListView.swift */,
 				38723A87237CBC090072091F /* ListConfiguration.swift */,
 				38109AEA237CD279008D3D16 /* ProductListViewBuilder.swift */,
 				38109AEC237CD2C8008D3D16 /* ProductItemBuilder.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		38DD8E26237D911B00D75AA0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				38C8BD45237C390F00C00EB6 /* ListPresenter.swift */,
+				38C8BD47237C395900C00EB6 /* ListView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";

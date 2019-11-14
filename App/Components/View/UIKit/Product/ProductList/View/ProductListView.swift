@@ -14,7 +14,7 @@ import Future
 
 typealias ProductListViewController = ViewController<ProductListView>
 
-final class ProductListView: GenericView, ListView, Bindable {
+final class ProductListView: GenericView, ListView {
 
     // MARK: Var
 

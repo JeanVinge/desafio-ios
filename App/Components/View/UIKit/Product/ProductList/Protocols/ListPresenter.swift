@@ -6,8 +6,8 @@
 //  Copyright © 2019 jean.vinge. All rights reserved.
 //
 
-import Domain
+import Utility
 
-protocol ListPresenter {
+protocol ListPresenter: Presenter {
     init(_ configuration: ListConfiguration)
 }

@@ -24,9 +24,9 @@ struct ProductListViewBuilder: ControllerBuilder {
             ContreteConfiguration(
                 decorator: decorator,
                 fetcher: item.fetcher,
-                notifier: item.notifier
+                notifier: item.notifier)
             )
-        ))
+        )
         decorator.insert(in: vc)
         return NavigationController(rootViewController: vc)
     }

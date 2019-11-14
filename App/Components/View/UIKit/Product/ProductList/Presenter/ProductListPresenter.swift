@@ -7,12 +7,9 @@
 //
 
 import Foundation
-import NetworkLayer
-import Utility
-import Future
 import Domain
 
-struct ProductListPresenter: Presenter, ListPresenter {
+struct ProductListPresenter: ListPresenter {
 
     // MARK: Var
 

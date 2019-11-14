@@ -6,11 +6,9 @@
 //  Copyright © 2019 jean.vinge. All rights reserved.
 //
 
-import UIKit
 import Utility
-import Future
 
-protocol ListView {
+protocol ListView: Bindable {
     associatedtype Presenter = ListPresenter
     associatedtype DataSource = ProductItemPresenter
     var dataSource: GenericDataSource<DataSource> { get }
