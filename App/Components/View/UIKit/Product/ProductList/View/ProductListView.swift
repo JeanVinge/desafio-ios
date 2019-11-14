@@ -82,10 +82,4 @@ final class ProductListView: GenericView, ListView, Bindable {
         dataSource.reload(items)
         tableView.endRefreshing()
     }
-
-    func viewDidLoad() {
-        DispatchQueue.main.async {
-            self.moduleDidLoad(true)
-        }
-    }
 }

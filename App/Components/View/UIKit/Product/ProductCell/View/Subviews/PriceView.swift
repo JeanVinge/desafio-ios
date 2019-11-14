@@ -75,6 +75,6 @@ extension PriceView: ContentConvertible {
     }
 
     func setup(with data: Deal) {
-        fullPriceLabel.text = data.fullPrice.toCurrency
+        fullPriceLabel.text = data.salePrice.toCurrency
     }
 }
