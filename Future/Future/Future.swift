@@ -7,7 +7,6 @@
  */
 
 import Foundation
-import Persistence
 
 public typealias FutureResult<Value> = Result<Value, Error>
 public typealias FutureErrorCompletion = (Error) -> Void

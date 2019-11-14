@@ -20,7 +20,7 @@
 		3889FB17237A318200F18D64 /* Future.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3889FB15237A318200F18D64 /* Future.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		388A4B52237B599C00E9F3F0 /* ProductList+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A4B51237B599C00E9F3F0 /* ProductList+Persistence.swift */; };
 		388A4B54237B59BE00E9F3F0 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388A4B53237B59BE00E9F3F0 /* Persistence.framework */; };
-		388A4B55237B59BE00E9F3F0 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 388A4B53237B59BE00E9F3F0 /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		388A4B55237B59BE00E9F3F0 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 388A4B53237B59BE00E9F3F0 /* Persistence.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
