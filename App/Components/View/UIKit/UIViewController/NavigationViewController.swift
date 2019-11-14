@@ -31,6 +31,10 @@ final class NavigationController: UINavigationController, ConfigurableView {
         barHideOnSwipeGestureRecognizer.addTarget(self, action: #selector(swipeGesture(_:)))
     }
 
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     func initConstraints() {}
 
     @objc func swipeGesture(_ gesture: UIPanGestureRecognizer) {
