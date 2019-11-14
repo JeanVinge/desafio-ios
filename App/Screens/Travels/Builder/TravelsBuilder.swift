@@ -15,7 +15,7 @@ struct TravelsBuilder: ControllerBuilder {
     // MARK: Var
 
     let heartButton: BadgeBarButtonItem
-    let notifyBarButton: NavigationBarPromise
+    let notifier: NavigationBarBadge
 
     // MARK: Init
 
@@ -26,7 +26,7 @@ struct TravelsBuilder: ControllerBuilder {
                 heartButton: heartButton,
                 tabbarTitle: L10n.Tabbar.travels,
                 tabbarImage: Asset.icPlane.image,
-                notifyBarButton: notifyBarButton
+                notifier: notifier
             )
         ).build()
     }

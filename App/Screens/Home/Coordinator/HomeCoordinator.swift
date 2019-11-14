@@ -12,38 +12,49 @@ import Utility
 import Future
 import Domain
 
-typealias NavigationBarPromise = Promise<Void>
+typealias NavigationBarBadge = NavigationBadgeNotifier
 
-final class HomeCoordinator: NSObject, Coordinator {
+protocol NavigationBadgeNotifier {
+    func update()
+}
+
+struct HomeCoordinator: Coordinator {
 
     // MARK: Var
 
     let tabbarController: UITabBarController
 
     let heartButton = BadgeBarButtonItem(Asset.icHeart.image)
-    var selection = NavigationBarPromise()
 
     var viewControllers: [UIViewController] {
         return [
             InCityBuilder(heartButton: heartButton,
-                          notifyBarButton: selection).build(),
+                          notifier: self).build(),
             TravelsBuilder(heartButton: heartButton,
-                           notifyBarButton: selection).build(),
+                           notifier: self).build(),
             ProductsBuilder(heartButton: heartButton,
-                            notifyBarButton: selection).build()
+                            notifier: self).build()
         ]
     }
 
     // MARK: Init
 
-    init(tabbarController: UITabBarController) {
-        self.tabbarController = tabbarController
-        super.init()
-        selection.observe { _ in
-            self.notify()
-        }
+    func start() {
+        tabbarController.setViewControllers(viewControllers,
+                                            animated: false)
     }
 
+    func selectNavigation(_ count: Int) {
+        heartButton.setBadge(count)
+    }
+}
+
+extension HomeCoordinator: NavigationBadgeNotifier {
+    
+    func update() {
+        notify()
+    }
+    
     func notify() {
         let count = Persistence
             .allCases
@@ -51,14 +62,5 @@ final class HomeCoordinator: NSObject, Coordinator {
             .compactMap { $0 }
             .reduce(0, +)
         selectNavigation(count)
-    }
-
-    func selectNavigation(_ count: Int) {
-        heartButton.setBadge(count)
-    }
-
-    func start() {
-        tabbarController.setViewControllers(viewControllers,
-                                            animated: false)
     }
 }

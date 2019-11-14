@@ -12,25 +12,25 @@ import NetworkLayer
 protocol ListConfiguration {
     var decorator: NavigationBarDecorator { get }
     var fetcher: Domain.ListFetcher { get }
-    var notifyBarButton: NavigationBarPromise { get }
+    var notifier: NavigationBarBadge { get }
 
     init(decorator: NavigationBarDecorator,
          fetcher: Domain.ListFetcher,
-         notifyBarButton: NavigationBarPromise)
+         notifier: NavigationBarBadge)
 }
 
 extension ListConfiguration {
     init(decorator: NavigationBarDecorator,
          fetcher: Domain.ListFetcher,
-         notifyBarButton: NavigationBarPromise) {
+         notifier: NavigationBarBadge) {
         self.init(decorator: decorator,
                   fetcher: fetcher,
-                  notifyBarButton: notifyBarButton)
+                  notifier: notifier)
     }
 }
 
 struct ContreteConfiguration: ListConfiguration {
     var decorator: NavigationBarDecorator
     var fetcher: Domain.ListFetcher
-    var notifyBarButton: NavigationBarPromise
+    var notifier: NavigationBarBadge
 }

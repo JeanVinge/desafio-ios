@@ -24,7 +24,7 @@ struct ProductListViewBuilder: ControllerBuilder {
             ContreteConfiguration(
                 decorator: decorator,
                 fetcher: item.fetcher,
-                notifyBarButton: item.notifyBarButton
+                notifier: item.notifier
             )
         ))
         decorator.insert(in: vc)

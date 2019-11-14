@@ -16,7 +16,7 @@ protocol ProductItemBuilder {
     var tabbarTitle: String { get }
     var tabbarImage: UIImage? { get }
     var fetcher: Domain.ListFetcher { get }
-    var notifyBarButton: NavigationBarPromise { get }
+    var notifier: NavigationBarBadge { get }
 }
 
 struct ProductsViewBuilder: ProductItemBuilder {
@@ -24,7 +24,7 @@ struct ProductsViewBuilder: ProductItemBuilder {
     var tabbarTitle: String
     var tabbarImage: UIImage?
     var fetcher: ListFetcher = ProductsFetcher()
-    var notifyBarButton: NavigationBarPromise
+    var notifier: NavigationBarBadge
 }
 
 struct TravelsViewBuilder: ProductItemBuilder {
@@ -32,7 +32,7 @@ struct TravelsViewBuilder: ProductItemBuilder {
     var tabbarTitle: String
     var tabbarImage: UIImage?
     var fetcher: ListFetcher = TravelsFetcher()
-    var notifyBarButton: NavigationBarPromise
+    var notifier: NavigationBarBadge
 }
 
 struct InCityViewBuilder: ProductItemBuilder {
@@ -40,5 +40,5 @@ struct InCityViewBuilder: ProductItemBuilder {
     var tabbarTitle: String
     var tabbarImage: UIImage?
     var fetcher: ListFetcher = InCityFetcher()
-    var notifyBarButton: NavigationBarPromise
+    var notifier: NavigationBarBadge
 }

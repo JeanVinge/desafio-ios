@@ -37,13 +37,13 @@ struct ProductListPresenter: Presenter, ListPresenter {
                            deal: Deal) {
         configuration.fetcher.store(deal)
         input.reloadItems.resolve(with: configuration.fetcher.toPresenter(input.trigger))
-        configuration.notifyBarButton.resolve(with: ())
+        configuration.notifier.update()
     }
 
     private func result(_ input: Input,
                         result: ResultProductsPresenter) {
         guard let presenter = try? result.get() else { return }
-        configuration.notifyBarButton.resolve(with: ())
+        configuration.notifier.update()
         input.list.resolve(with: presenter)
     }
 
